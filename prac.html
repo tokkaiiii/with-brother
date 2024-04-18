@@ -13,6 +13,20 @@
         fetch("http://spartacodingclub.shop/sparta_api/seoulair").then(res => res.json()).then(data => {
             console.log(data)
         })
+
+        $(document).ready(function () {
+            let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
+            fetch(url).then(res => res.json()).then(data => {
+                let temp = data['temp'];
+                $('#msg').text(temp);
+                if (temp > 10) {
+                    $('#temp').text('☀️');
+                } else {
+                    $('#temp').text('🧊');
+                }
+            })
+        })
+
     </script>
     <style>
         body {
@@ -25,7 +39,7 @@
         #menu {
             width: 200px;
             margin: 200px auto auto 1000px;
-            background: #f3f3f3 ;
+            background: #f3f3f3;
             border: 1px solid #d8d8d8;
             text-align: center;
             opacity: 0.7;
@@ -77,10 +91,16 @@
         span:hover+p.arrow_box {
             display: block;
         }
-        
-        .can{
+
+        .can {
             text-decoration: none;
             color: #FF9E9B
+        }
+
+        .weather-icon {
+            margin-left: 15px;
+            margin-top: 5px;
+            font-size: 40px;
         }
     </style>
 
@@ -90,10 +110,18 @@
 
 
 <body>
+<br>
     <audio autoplay src="산중호걸.mp3" controls loop="infinite"></audio>
+
+    <div id="temp"class="weather-icon">
+        오늘의 날씨
+    </div>
+
     <div id="menu">
         <div>
-            <span><a class="can" href="https://smartstore.naver.com/power-dog/products/5767909253?NaPm=ct%3Dlv3omj5k%7Cci%3Df589edb22145a64fde788c75024f2d5bc8caeb49%7Ctr%3Dsls%7Csn%3D385216%7Chk%3Da6fb44d4892d58eb062dc9ccedde2218a1b7a2d9"> 참가비 보려면<br>여기 클릭해봐냥냥냥!!!</a></span>
+            <span><a class="can"
+                    href="https://smartstore.naver.com/power-dog/products/5767909253?NaPm=ct%3Dlv3omj5k%7Cci%3Df589edb22145a64fde788c75024f2d5bc8caeb49%7Ctr%3Dsls%7Csn%3D385216%7Chk%3Da6fb44d4892d58eb062dc9ccedde2218a1b7a2d9">
+                    참가비 보려면<br>여기 클릭해봐냥냥냥!!!</a></span>
             <p class="arrow_box">참치캔이다냥!</p>
         </div>
     </div>
