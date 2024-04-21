@@ -103,8 +103,32 @@
             font-size: 40px;
         }
 
-        .info {
-            ;
+        #info {
+            font-size: 40px;
+        }
+
+        #btd {
+            background-image: url(생일카드.jpg);
+            background-position: center;
+            font-size: 60px;
+            padding: 20px;
+            text-align: center;
+            width: 500px;
+            border-radius: 5px;
+        }
+        .paw {
+            font-size: 100px;
+            color: white;
+        }
+
+
+        #paw2 {
+            transform: scaleX(-1);
+        }
+        #flag {
+            margin-top: 50px;
+            margin-left: 230px;
+            display: flex;
         }
     </style>
 
@@ -114,22 +138,21 @@
 
 
 <body>
-<br>
+    <br>
     <audio autoplay src="산중호걸.mp3" controls loop="infinite"></audio>
 
-    <div id="info">
-        <div>
-            <span><a class="road"
-                    href="https://www.youtube.com/@Catinthecheese"
-                    target="_blank"
-                    title="구독과 좋아요 알림설정은 큰 힘이 됩니다">
-                    오시는 길</a></span>
 
+
+
+    <div id="temp" class="weather-icon">
+        오늘의 날씨
     </div>
 
 
-    <div id="temp"class="weather-icon">
-        오늘의 날씨
+    <div id="info">
+        <span><a class="road" href="https://www.youtube.com/@Catinthecheese" target="_blank"
+                title="구독과 좋아요 알림설정은 큰 힘이 됩니다">
+                🐾</a></span>
     </div>
 
     <div id="menu">
@@ -140,6 +163,12 @@
             <p class="arrow_box">참치캔이다냥!</p>
         </div>
     </div>
+
+    <div id="flag">
+        <span class="paw">ദ്ദി</span><span id="btd">오늘 내 생일</span><span class="paw" id="paw2">ദ്ദി</span>
+    </div>
+
+    
 </body>
 
 
